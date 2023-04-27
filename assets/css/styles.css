@@ -271,7 +271,8 @@ body.dark-theme {
   padding: .375rem;
   border-radius: .75rem;
   display:flex;
-  justify-content: space-between;
+  justify-content:center;
+  align-items: center;
   column-gap: .5rem;
 }
 
@@ -289,6 +290,7 @@ body.dark-theme {
   background-color: transparent;
   transition: .3s;
 }
+
 
 .filters__button:hover{
   background-color:var(--body-color);
