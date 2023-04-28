@@ -635,7 +635,7 @@ body.dark-theme {
 @media screen and (max-width:600px){
 
   .timeline{
-    margin:auto;
+    margin: 3rem auto;
   }
 
   
