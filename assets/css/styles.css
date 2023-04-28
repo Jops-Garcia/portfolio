@@ -414,6 +414,101 @@ body.dark-theme {
   background-color: hsl(var(--hue), 8%, 44%);
 }
 
+/*=============== TIMELINE ===============*/
+
+  /*.5rem = 8px | 1rem = 16px ...*/
+.timeline{
+  position: relative;
+  max-width: 75rem;
+  margin: auto;
+}
+.academic__container{
+  position: relative;
+  width: 50%;
+  padding:1.5rem 1.25rem;
+  border-radius: 1rem;
+
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+
+@keyframes movedown {
+  0%{
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.academic__container:nth-child(1){
+  animation-delay: 0s;
+}
+.academic__container:nth-child(2){
+  animation-delay: 1s;
+}
+.academic__container:nth-child(3){
+  animation-delay: 2s;
+}
+.academic__container:nth-child(4){
+  animation-delay: 3s;
+}
+
+.text-box{
+  padding: 20px 30px;
+  background: var(--first-color);
+  position: relative;
+  border-radius: 6px;
+  font-size: var(--small-font-size);
+}
+.text-box h3{
+  display: inline-block;
+  margin: auto;
+}
+.text-box h2{
+  display: inline-block;
+  margin: auto;
+}
+.academic__container img{
+  position: absolute;
+  width: 40px;
+  border-radius:50%;
+  right: -20px;
+  top:32px;
+  z-index: 10;
+  
+}
+.left-container{
+  left: 0;
+}
+.right-container{
+  left: 50%;
+}
+
+.timeline::after{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background:var(--first-color-alt);
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: moveline 4s linear forwards;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* dispositivos pequenos */
 @media screen and (max-width:320px){
@@ -449,6 +544,8 @@ body.dark-theme {
     margin: 3rem auto;
   }
 }
+
+
 
 @media screen and (min-width:776px){
   .projects__content,.skills__content{
@@ -527,4 +624,33 @@ body.dark-theme {
   .footer__copy{
     margin: 4.5rem 0 2.5rem;
   }
+}
+
+@media screen and (min-width:601px){
+  .right-container img{
+    left: -20px;
+  }
+}
+
+@media screen and (max-width:600px){
+
+  .timeline{
+    margin:auto;
+  }
+
+  
+  .container{
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .text-box{
+    font-size: 13px;
+  }
+  .right-container{
+    left: 0;
+  }
+
+
+  
 }
